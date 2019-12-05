@@ -1,0 +1,13 @@
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\bin\Debug\EntidadesTest.exe.config
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\bin\Debug\EntidadesTest.exe
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\bin\Debug\EntidadesTest.pdb
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\bin\Debug\EntidadesTest.xml
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\bin\Debug\Entidades.dll
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\bin\Debug\Entidades.pdb
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\bin\Debug\Entidades.xml
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\obj\Debug\EntidadesTest.vbprojResolveAssemblyReference.cache
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\obj\Debug\EntidadesTest.Resources.resources
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\obj\Debug\EntidadesTest.vbproj.GenerateResource.Cache
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\obj\Debug\EntidadesTest.exe
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\obj\Debug\EntidadesTest.xml
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesTest\obj\Debug\EntidadesTest.pdb
