@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{16E07A28-D0FA-461F-A8B3-20BA86EE028D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>EntidadesTest.Module1</StartupObject>
+    <StartupObject>EntidadesTest.EstacionamientoTest</StartupObject>
     <RootNamespace>EntidadesTest</RootNamespace>
     <AssemblyName>EntidadesTest</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -68,7 +68,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="EstacionamientoTest.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

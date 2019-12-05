@@ -18,8 +18,28 @@ Module EstacionamientoTest
 
         Console.WriteLine()
 
+        Dim autos As New Hashtable
+        autos.Add("AVD090", horaIngreso)
+        horaIngreso = horaIngreso.AddHours(1)
+        autos.Add("KVA285", horaIngreso)
 
+        Console.WriteLine(autos.Item("KVA285"))
+        autos.Remove("AVD090")
 
+        For Each auto As DictionaryEntry In autos
+            Console.WriteLine(auto.Key)
+        Next
+
+        Console.WriteLine("Estacionamiento Coconuts" & vbNewLine)
+        Dim estacionamiento As New Estacionamiento
+        estacionamiento.CapacidadTotal = 100
+        estacionamiento.PrecioPorHora = 115
+        Console.WriteLine("Precio Hora: $" & estacionamiento.PrecioPorHora)
+        Console.WriteLine("Capacidad Total: " & estacionamiento.CapacidadTotal)
+        Console.WriteLine("Cantidad Estacionados: " & estacionamiento.CantidadEstacionados)
+        Console.WriteLine("Espacios Disponibles: " & estacionamiento.EspaciosDisponibles)
+        Console.WriteLine("Total Facturado: $" & estacionamiento.TotalFacturado)
+        estacionamiento.IngresoDetectado("")
         Console.ReadKey()
     End Sub
 
