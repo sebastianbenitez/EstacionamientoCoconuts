@@ -2,45 +2,27 @@
 Module EstacionamientoTest
 
     Sub Main()
-        Dim ahora As New DateTime
-        Dim horaAvanzada As New DateTime
+        Dim horaMin As New DateTime
+        Dim horaMax As New DateTime
 
-        ahora = Now
-        horaAvanzada = ahora.AddHours(1)
+        horaMin = Now
+        horaMax = horaMin.AddMinutes(1)
 
-        Console.WriteLine("Ahora: " & ahora.ToString("HH:mm:ss"))
-        Console.WriteLine("Hora Avanzada: " & horaAvanzada.ToString("HH:mm:ss"))
+        Console.WriteLine("Ahora: " & horaMin.ToString("HH:mm:ss"))
+        Console.WriteLine("Hora Avanzada: " & horaMax.ToString("HH:mm:ss"))
 
-        Dim diferenciaSegundos As Integer = DateDiff(DateInterval.Second, ahora, horaAvanzada)
+        Dim horasEstacionado As Int16 = DateDiff(DateInterval.Hour, horaMin, horaMax)
+        Dim minutosExtra As Int16 = DateDiff(DateInterval.Minute, horaMin, horaMax) - horasEstacionado * 60
+        If minutosExtra > 0 Then
+            horasEstacionado += 1
+        End If
 
-        Console.WriteLine()
+        Console.WriteLine(horasEstacionado)
+        Console.WriteLine(horasEstacionado * 60)
 
-        Dim autos As New Hashtable
-        autos.Add("AVD090", ahora)
-        Console.WriteLine(autos.Count)
-            autos.Add("QWU765", horaAvanzada)
-        autos.Add("KVA285", ahora)
-        autos.Add("UIT907", horaAvanzada)
-        autos.Add("KLE098", ahora)
-        autos.Add("INM321", horaAvanzada)
-        'autos.Remove("AVD090")
 
-        Dim keys = autos.Keys.Cast(Of String)().ToArray()
-        Dim values = autos.Values.Cast(Of DateTime)().ToArray()
-
-        Array.Sort(values, keys)
-
-        For Each key In keys
-            Console.WriteLine(key)
-        Next
-
-        For Each auto As DictionaryEntry In autos
-            Console.WriteLine(auto.Key & " - " & auto.Value)
-        Next
-
-        Console.WriteLine("Estacionamiento Coconuts" & vbNewLine)
         Dim estacionamiento As New Estacionamiento
-        estacionamiento.CapacidadTotal = 4
+        estacionamiento.CapacidadTotal = 100
         estacionamiento.PrecioPorHora = 115
         Console.WriteLine("Precio Hora: $" & estacionamiento.PrecioPorHora)
         Console.WriteLine("Capacidad Total: " & estacionamiento.CapacidadTotal)
@@ -52,11 +34,11 @@ Module EstacionamientoTest
             estacionamiento.IngresoDetectado("MNI098")
             estacionamiento.IngresoDetectado("UIH231")
             estacionamiento.IngresoDetectado("OIK764")
+            ' Debe lanzar excepcion por clave duplicada
             estacionamiento.IngresoDetectado("OIK764")
         Catch e As Exception
             Console.WriteLine(e.Message)
         End Try
-
 
         For Each vehiculo In estacionamiento.VehiculosEstacionados
             Console.WriteLine(vehiculo)

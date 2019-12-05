@@ -51,8 +51,17 @@
     End Property
 
     Public Sub EgresoDetectado(patente As String) Implements IParkingLot.EgresoDetectado
-        _vehiculos.Remove(patente)
+        Dim fechaHoraIngreso As New DateTime
+        fechaHoraIngreso = _vehiculos.Item(patente)
 
+        Dim horasEstacionado As Int16 = DateDiff(DateInterval.Hour, fechaHoraIngreso, Now)
+        Dim minutosExtra As Int16 = DateDiff(DateInterval.Minute, fechaHoraIngreso, Now) - horasEstacionado * 60
+        If minutosExtra > 0 Then
+            horasEstacionado += 1
+        End If
+
+        _totalFacturado += _precioPorHora * horasEstacionado
+        _vehiculos.Remove(patente)
     End Sub
 
     Public Sub IngresoDetectado(patente As String) Implements IParkingLot.IngresoDetectado
@@ -74,4 +83,10 @@
         Array.Sort(fechaHoraIngreso, patentes)
         _listaPatentes = patentes
     End Sub
+
+    Public Function GetFechaHoraIngreso(patente As String) As String
+        Dim fechaHoraIngreso As DateTime
+        fechaHoraIngreso = _vehiculos.Item(patente)
+        Return fechaHoraIngreso.ToString("dd/MM/yyyy HH:mm:ss")
+    End Function
 End Class

@@ -91,7 +91,7 @@ Partial Class EstacionamientoForm
         '
         Me.LblListVehiculos.AutoSize = True
         Me.LblListVehiculos.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblListVehiculos.Location = New System.Drawing.Point(286, 194)
+        Me.LblListVehiculos.Location = New System.Drawing.Point(273, 194)
         Me.LblListVehiculos.Name = "LblListVehiculos"
         Me.LblListVehiculos.Size = New System.Drawing.Size(184, 16)
         Me.LblListVehiculos.TabIndex = 5
@@ -105,6 +105,7 @@ Partial Class EstacionamientoForm
         Me.BtnInformarEgreso.TabIndex = 6
         Me.BtnInformarEgreso.Text = "Informar Egreso"
         Me.BtnInformarEgreso.UseVisualStyleBackColor = True
+        Me.BtnInformarEgreso.Visible = False
         '
         'LblPrecioHoraHead
         '
@@ -215,6 +216,7 @@ Partial Class EstacionamientoForm
         Me.LblFechaHoraIngresoHead.Size = New System.Drawing.Size(69, 16)
         Me.LblFechaHoraIngresoHead.TabIndex = 17
         Me.LblFechaHoraIngresoHead.Text = "Ingreso:"
+        Me.LblFechaHoraIngresoHead.Visible = False
         '
         'LblFechaHoraIngreso
         '
@@ -225,6 +227,7 @@ Partial Class EstacionamientoForm
         Me.LblFechaHoraIngreso.Size = New System.Drawing.Size(52, 16)
         Me.LblFechaHoraIngreso.TabIndex = 18
         Me.LblFechaHoraIngreso.Text = "Fecha"
+        Me.LblFechaHoraIngreso.Visible = False
         '
         'EstacionamientoForm
         '
