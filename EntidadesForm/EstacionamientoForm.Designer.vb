@@ -39,6 +39,8 @@ Partial Class EstacionamientoForm
         Me.LblEstacionados = New System.Windows.Forms.Label()
         Me.LblDisponibles = New System.Windows.Forms.Label()
         Me.LblDisponiblesHead = New System.Windows.Forms.Label()
+        Me.LblFechaHoraIngresoHead = New System.Windows.Forms.Label()
+        Me.LblFechaHoraIngreso = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LblHeader
@@ -204,11 +206,33 @@ Partial Class EstacionamientoForm
         Me.LblDisponiblesHead.TabIndex = 15
         Me.LblDisponiblesHead.Text = "Disponibles:"
         '
+        'LblFechaHoraIngresoHead
+        '
+        Me.LblFechaHoraIngresoHead.AutoSize = True
+        Me.LblFechaHoraIngresoHead.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFechaHoraIngresoHead.Location = New System.Drawing.Point(286, 328)
+        Me.LblFechaHoraIngresoHead.Name = "LblFechaHoraIngresoHead"
+        Me.LblFechaHoraIngresoHead.Size = New System.Drawing.Size(69, 16)
+        Me.LblFechaHoraIngresoHead.TabIndex = 17
+        Me.LblFechaHoraIngresoHead.Text = "Ingreso:"
+        '
+        'LblFechaHoraIngreso
+        '
+        Me.LblFechaHoraIngreso.AutoSize = True
+        Me.LblFechaHoraIngreso.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFechaHoraIngreso.Location = New System.Drawing.Point(361, 328)
+        Me.LblFechaHoraIngreso.Name = "LblFechaHoraIngreso"
+        Me.LblFechaHoraIngreso.Size = New System.Drawing.Size(52, 16)
+        Me.LblFechaHoraIngreso.TabIndex = 18
+        Me.LblFechaHoraIngreso.Text = "Fecha"
+        '
         'EstacionamientoForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(543, 361)
+        Me.ClientSize = New System.Drawing.Size(543, 374)
+        Me.Controls.Add(Me.LblFechaHoraIngreso)
+        Me.Controls.Add(Me.LblFechaHoraIngresoHead)
         Me.Controls.Add(Me.LblDisponibles)
         Me.Controls.Add(Me.LblDisponiblesHead)
         Me.Controls.Add(Me.LblEstacionados)
@@ -250,4 +274,6 @@ Partial Class EstacionamientoForm
     Friend WithEvents LblEstacionados As Label
     Friend WithEvents LblDisponibles As Label
     Friend WithEvents LblDisponiblesHead As Label
+    Friend WithEvents LblFechaHoraIngresoHead As Label
+    Friend WithEvents LblFechaHoraIngreso As Label
 End Class

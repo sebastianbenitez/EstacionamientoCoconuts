@@ -1,23 +1,22 @@
 ﻿Public Class Estacionamiento
     Implements IParkingLot
 
-    Private _cantidadEstacionados As Integer
     Private _capacidadTotal As Integer
     Private _precioPorHora As Integer
     Private _totalFacturado As Double
-    Private _fechaHora As DateTime
+    Private _vehiculos As Hashtable
+    Private _listaPatentes As IList(Of String)
 
     Sub New()
-        _cantidadEstacionados = 0
         _capacidadTotal = 0
         _precioPorHora = 0
         _totalFacturado = 0
-        _fechaHora = New DateTime
+        _vehiculos = New Hashtable
     End Sub
 
     Public ReadOnly Property CantidadEstacionados As Integer Implements IParkingLot.CantidadEstacionados
         Get
-            Return _cantidadEstacionados
+            Return _vehiculos.Count
         End Get
     End Property
 
@@ -52,16 +51,27 @@
     End Property
 
     Public Sub EgresoDetectado(patente As String) Implements IParkingLot.EgresoDetectado
-        _fechaHora = Now
-        _cantidadEstacionados -= 1
+        _vehiculos.Remove(patente)
+
     End Sub
 
     Public Sub IngresoDetectado(patente As String) Implements IParkingLot.IngresoDetectado
-        _fechaHora = Now
-        _cantidadEstacionados += 1
+        If CantidadEstacionados >= CapacidadTotal Then
+            Throw New ArgumentException("Capacidad maxima alcanzada")
+        End If
+        _vehiculos.Add(patente, Now)
     End Sub
 
     Public Function VehiculosEstacionados() As IList(Of String) Implements IParkingLot.VehiculosEstacionados
-        Throw New NotImplementedException()
+        OrdenarPatentes()
+        Return _listaPatentes
     End Function
+
+    Private Sub OrdenarPatentes()
+        Dim patentes = _vehiculos.Keys.Cast(Of String)().ToArray()
+        Dim fechaHoraIngreso = _vehiculos.Values.Cast(Of DateTime)().ToArray()
+
+        Array.Sort(fechaHoraIngreso, patentes)
+        _listaPatentes = patentes
+    End Sub
 End Class

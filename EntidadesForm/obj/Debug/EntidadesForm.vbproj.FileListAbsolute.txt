@@ -1,0 +1,14 @@
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\bin\Debug\EntidadesForm.exe.config
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\bin\Debug\EntidadesForm.exe
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\bin\Debug\EntidadesForm.pdb
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\bin\Debug\EntidadesForm.xml
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\bin\Debug\Entidades.dll
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\bin\Debug\Entidades.pdb
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\bin\Debug\Entidades.xml
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\obj\Debug\EntidadesForm.vbprojResolveAssemblyReference.cache
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\obj\Debug\EntidadesForm.EstacionamientoForm.resources
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\obj\Debug\EntidadesForm.Resources.resources
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\obj\Debug\EntidadesForm.vbproj.GenerateResource.Cache
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\obj\Debug\EntidadesForm.exe
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\obj\Debug\EntidadesForm.xml
+c:\users\shev\documents\visual studio 2015\Projects\EstacionamientoCoconuts\EntidadesForm\obj\Debug\EntidadesForm.pdb
