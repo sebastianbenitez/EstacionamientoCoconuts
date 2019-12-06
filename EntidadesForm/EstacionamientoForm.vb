@@ -9,7 +9,7 @@ Public Class EstacionamientoForm
         Next
     End Sub
 
-    Private Sub RefreshHeaders()
+    Private Sub RefreshTotales()
         LblFacturado.Text = "$" & estacionamiento.TotalFacturado
         LblEstacionados.Text = estacionamiento.CantidadEstacionados
         LblDisponibles.Text = estacionamiento.EspaciosDisponibles
@@ -33,7 +33,7 @@ Public Class EstacionamientoForm
             Return
         End Try
 
-        RefreshHeaders()
+        RefreshTotales()
         RefreshLbxVehiculos()
         TxtPatente.Text = ""
         TxtPatente.Focus()
@@ -54,7 +54,7 @@ Public Class EstacionamientoForm
         LblFechaHoraIngreso.Hide()
         BtnInformarEgreso.Hide()
 
-        RefreshHeaders()
+        RefreshTotales()
         RefreshLbxVehiculos()
     End Sub
 End Class

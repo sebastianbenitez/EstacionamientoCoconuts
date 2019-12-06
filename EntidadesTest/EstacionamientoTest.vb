@@ -2,25 +2,6 @@
 Module EstacionamientoTest
 
     Sub Main()
-        Dim horaMin As New DateTime
-        Dim horaMax As New DateTime
-
-        horaMin = Now
-        horaMax = horaMin.AddMinutes(1)
-
-        Console.WriteLine("Ahora: " & horaMin.ToString("HH:mm:ss"))
-        Console.WriteLine("Hora Avanzada: " & horaMax.ToString("HH:mm:ss"))
-
-        Dim horasEstacionado As Int16 = DateDiff(DateInterval.Hour, horaMin, horaMax)
-        Dim minutosExtra As Int16 = DateDiff(DateInterval.Minute, horaMin, horaMax) - horasEstacionado * 60
-        If minutosExtra > 0 Then
-            horasEstacionado += 1
-        End If
-
-        Console.WriteLine(horasEstacionado)
-        Console.WriteLine(horasEstacionado * 60)
-
-
         Dim estacionamiento As New Estacionamiento
         estacionamiento.CapacidadTotal = 100
         estacionamiento.PrecioPorHora = 115
@@ -40,8 +21,11 @@ Module EstacionamientoTest
             Console.WriteLine(e.Message)
         End Try
 
+        Console.WriteLine(vbNewLine & "PATENTES:")
+
         For Each vehiculo In estacionamiento.VehiculosEstacionados
-            Console.WriteLine(vehiculo)
+            Dim horaIngreso As String = estacionamiento.GetFechaHoraIngreso(vehiculo)
+            Console.WriteLine(vehiculo & ": " & horaIngreso)
         Next
         Console.ReadKey()
     End Sub

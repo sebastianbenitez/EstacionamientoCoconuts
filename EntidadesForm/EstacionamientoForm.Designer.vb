@@ -47,11 +47,11 @@ Partial Class EstacionamientoForm
         '
         Me.LblHeader.AutoSize = True
         Me.LblHeader.Font = New System.Drawing.Font("Verdana", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblHeader.Location = New System.Drawing.Point(95, 9)
+        Me.LblHeader.Location = New System.Drawing.Point(112, 9)
         Me.LblHeader.Name = "LblHeader"
-        Me.LblHeader.Size = New System.Drawing.Size(415, 32)
+        Me.LblHeader.Size = New System.Drawing.Size(266, 32)
         Me.LblHeader.TabIndex = 0
-        Me.LblHeader.Text = "Estacionamiento Coconuts"
+        Me.LblHeader.Text = "Estacionamiento"
         '
         'LblPatenteHead
         '
@@ -224,9 +224,9 @@ Partial Class EstacionamientoForm
         Me.LblFechaHoraIngreso.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFechaHoraIngreso.Location = New System.Drawing.Point(361, 328)
         Me.LblFechaHoraIngreso.Name = "LblFechaHoraIngreso"
-        Me.LblFechaHoraIngreso.Size = New System.Drawing.Size(52, 16)
+        Me.LblFechaHoraIngreso.Size = New System.Drawing.Size(87, 16)
         Me.LblFechaHoraIngreso.TabIndex = 18
-        Me.LblFechaHoraIngreso.Text = "Fecha"
+        Me.LblFechaHoraIngreso.Text = "FechaHora"
         Me.LblFechaHoraIngreso.Visible = False
         '
         'EstacionamientoForm
@@ -254,6 +254,7 @@ Partial Class EstacionamientoForm
         Me.Controls.Add(Me.LblPatenteHead)
         Me.Controls.Add(Me.LblHeader)
         Me.Name = "EstacionamientoForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Estacionamiento Coconuts"
         Me.ResumeLayout(False)
         Me.PerformLayout()
